@@ -35,16 +35,17 @@ CREATE table animals(
     environnement varchar(100) NOT NULL,
     deathDate DATE NOT NULL,
     informations varchar(255),
+    idFavHealer int(11) DEFAULT NULL,
     idEnclosure int(11) DEFAULT NULL,
-    idZoo int(11) NOT NULL,
     PRIMARY KEY (idAnimal),
     UNIQUE KEY idAnimal (idAnimal),
     CONSTRAINT FK_Animals_Enclosure
-    FOREIGN KEY (idEnclosure
+    FOREIGN KEY (idEnclosure)
     REFERENCES Enclosures (idEnclosure)
+    ) ENGINE=InnoDB;
 
-    
-)
+
+
 
 
 CREATE table categorie(
