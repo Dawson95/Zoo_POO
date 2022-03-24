@@ -44,6 +44,22 @@ CREATE table animals(
     REFERENCES Enclosures (idEnclosure)
     ) ENGINE=InnoDB;
 
+    CREATE table healers(
+        idHealer int(11) NOT NULL AUTO_INCREMENT,
+        name varchar(100) NOT NULL,
+        firstName varchar(100) NOT NULL,
+        entryDate DATE NOT NULL,
+        gender varchar(100) NOT NULL,
+        phoneNumber int(11) DEFAULT NULL,
+        mail varchar(100) DEFAULT NULL,
+        photo varchar(255) DEFAULT NULL,
+        speciality varchar(100) NOT NULL,
+        maxEnclosures int(11) DEFAULT 0,
+        
+
+
+    )
+
 
 
 
