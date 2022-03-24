@@ -55,7 +55,10 @@ CREATE table animals(
         photo varchar(255) DEFAULT NULL,
         speciality varchar(100) NOT NULL,
         maxEnclosures int(11) DEFAULT 0,
-        
+        managerID int(11) DEFAULT NULL,
+        exitDate DATE DEFAULT NULL,
+        informations varchar(255),
+
 
 
     )
