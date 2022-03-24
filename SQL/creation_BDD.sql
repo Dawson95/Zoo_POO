@@ -58,7 +58,8 @@ CREATE table animals(
         managerID int(11) DEFAULT NULL,
         exitDate DATE DEFAULT NULL,
         informations varchar(255),
-
+        PRIMARY KEY (idHealer),
+        UNIQUE KEY idHealer (idHealer),
 
 
     )
