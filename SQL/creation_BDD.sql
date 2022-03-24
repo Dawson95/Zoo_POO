@@ -61,7 +61,22 @@ CREATE table animals(
         PRIMARY KEY (idHealer),
         UNIQUE KEY idHealer (idHealer),
 
+        
+        
 
+    ) ENGINE=InnoDB;
+
+    CREATE table healersAnimal(
+        idHealer int(11) NOT NULL,
+        idAnimal int(11) NOT NULL,
+        PRIMARY KEY (idHealer,idAnimal),
+        CONSTRAINT FK_Animals_Enclosure
+        FOREIGN KEY (idEnclosure)
+        REFERENCES Enclosures (idEnclosure),
+        CONSTRAINT FK_Animals_Enclosure
+        FOREIGN KEY (idEnclosure)
+        REFERENCES Enclosures (idEnclosure)
+        
     )
 
 
