@@ -59,7 +59,7 @@ CREATE table animals(
         exitDate DATE DEFAULT NULL,
         informations varchar(255),
         PRIMARY KEY (idHealer),
-        UNIQUE KEY idHealer (idHealer),
+        UNIQUE KEY idHealer (idHealer)
 
         
         
@@ -70,14 +70,14 @@ CREATE table animals(
         idHealer int(11) NOT NULL,
         idAnimal int(11) NOT NULL,
         PRIMARY KEY (idHealer,idAnimal),
-        CONSTRAINT FK_Animals_Enclosure
-        FOREIGN KEY (idEnclosure)
-        REFERENCES Enclosures (idEnclosure),
-        CONSTRAINT FK_Animals_Enclosure
-        FOREIGN KEY (idEnclosure)
-        REFERENCES Enclosures (idEnclosure)
+        CONSTRAINT FK_healersAnimal_Animal
+        FOREIGN KEY (idAnimal)
+        REFERENCES animals (idAnimal),
+        CONSTRAINT FK_healersAnimal_healers
+        FOREIGN KEY (idHealer)
+        REFERENCES healers (idHealer)
         
-    )
+    )ENGINE=InnoDB;
 
 
 
