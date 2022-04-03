@@ -1,5 +1,5 @@
 <?php
-class eclosure{
+class Enclosure{
     private $idEnclosure;
     private $animalSize;
     private $enclosureSize;
