@@ -11,7 +11,7 @@ idEnclosure int(11) NOT NULL AUTO_INCREMENT,
 animalSize int(11) DEFAULT 0,
 enclosureSize int(11) NOT NULL,
 environnement varchar(100) DEFAULT NULL,
-empty bit default 1,
+vacant bit DEFAULT 1,
 nbrAnimals int(11) DEFAULT 0,
 idZoo int(11) NOT NULL,
 
@@ -79,29 +79,3 @@ CREATE table animals(
         
     )ENGINE=InnoDB;
 
-
-
-
-
-CREATE table categorie(
-idCategorie int(11) NOT NULL AUTO_INCREMENT,
-libelle varchar(100) NOT NULL,
-PRIMARY KEY (idCategorie)
-) ENGINE=InnoDB;
-
-CREATE table tache(
-    idTache int(11) NOT NULL AUTO_INCREMENT,
-    libelle varchar(100) NOT NULL,
-    description varchar(255) NOT NULL,
-    status bit default 0,
-    idTodolist int(11) NOT NULL,
-    idCategorie int(11) NOT NULL,
-    PRIMARY KEY (idTache),
-    UNIQUE KEY idTache (idTache),
-    CONSTRAINT FK_tache_idTodolist
-    FOREIGN KEY (idTodolist)
-    REFERENCES todolist (idTodolist),
-    CONSTRAINT FK_tache_idCategorie
-    FOREIGN KEY (idCategorie)
-    REFERENCES categorie (idCategorie)
-) ENGINE=InnoDB;
