@@ -7,17 +7,18 @@ ob_start();
         <img src="<?= URL ?>public/images/<?= $enclosure->getImage(); ?>">
     </div>
     <div class="col-6">
-        <p>Enclosure Id : <?= $livre->getId(); ?></p>
-        <p>Animal Size : <?= $livre->getAnimalSize(); ?></p>
-        <p>Enclosure Size : <?= $livre->getEnclosureSize(); ?></p>
-        <p>Environnement : <?= $livre->getEnvironnement(); ?></p>
-        <p>Animal Size : <?= $livre->environnement(); ?></p>
-        <p>Animal Size : <?= $livre->environnement(); ?></p>
+        <p>Enclosure Id : <?= $enclosure->getId(); ?></p>
+        <p>Animal Size : <?= $enclosure->getAnimalSize(); ?></p>
+        <p>Enclosure Size : <?= $enclosure->getEnclosureSize(); ?></p>
+        <p>Environnement : <?= $enclosure->getEnvironnement(); ?></p>
+        <p>vacant : <?= $enclosure->getVacant(); ?></p>
+        <p>Number of animals : <?= $enclosure->getNbrAnimals(); ?></p>
+        <p>Image : <?= $enclosure->getImage(); ?></p>
     </div>
 </div>
 
 <?php
 $content = ob_get_clean();
-$titre = $livre->getTitre();
+$titre = $enclosure->getId();
 require "template.php";
 ?>
