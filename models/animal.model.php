@@ -19,7 +19,7 @@ abstract class Animal{
     static $nbrAnimals = 0;
 
     public function __construct(){
-        self::addAnimal();
+        addAnimal();
     }
 
 
