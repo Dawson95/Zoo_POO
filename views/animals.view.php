@@ -17,7 +17,7 @@ ob_start();
     <tr>
         <td class="align-middle"><img src="public/images/<?= $animals[$i]->getImage(); ?>" width="60px;"></td>
         <td class="align-middle"><a href="<?= URL ?><?= $animals[$i]->getId(); ?>"><?= $animals[$i]->getName(); ?></a></td>
-        <td class="align-middle"><?= $animals[$i]->getAge(); ?></td>
+        <td class="align-middle"><?= $animals[$i]->getAge()->getSpecies(); ?></td>
         <td class="align-middle"><a href="<?= URL ?>...<?= $animals[$i]->getId(); ?>" class="btn btn-warning">Modifier</a></td>
         <td class="align-middle">
             <form method="POST" action="<?= URL ?>...<?= $animals[$i]->getId(); ?>" onSubmit="return confirm('Voulez-vous vraiment supprimer l'animal ?');">
