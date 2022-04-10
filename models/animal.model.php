@@ -17,15 +17,14 @@ abstract class Animal{
     private $idFavHealer;
     private $idEnclosure;
 
-    public function __construct($id,$name,$age,$species,$entryDate,$gender,$idParent,$photo,$diet,$treatment,$environnement,$deathDate,$information){
-        $this->name = $name;
-        $this->age = $age;
-        $this->species = $species;
-        $this->entryDate = $entryDate;
-        $this->gender = $gender;
-        $this->idParent = $idParent;
-        $this->diet = $diet;
-        
+    public function getName(){return $this->name;}
+    public function setName($name){$this->name = $name;}
 
-    }
+    public function getAge(){return $this->age;}
+    public function setAge($age){$this->age = $age;}
+
+    public function getSpecies(){return $this->species;}
+    public function setSpecies($species){$this->species = $species;}
+
+
 }
