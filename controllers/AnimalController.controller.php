@@ -6,7 +6,7 @@ class AnimalsController{
 
     public function __construct(){
         $this->animalManager = new AnimalManager;
-        $this->AnimalManager->chargementAnimal();
+        $this->AnimalManager->chargementAnimals();
     }
 
     public function viewAnimals(){

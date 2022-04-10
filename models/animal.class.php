@@ -1,6 +1,9 @@
 <?php
+require_once "../traits/name.trait.php";
+
 
 abstract class Animal{
+    use getName;
     private $id;
     private $name;
     private $age;
@@ -19,13 +22,23 @@ abstract class Animal{
     static $nbrAnimals = 0;
 
     public function __construct(){
+        $this->name = $name;
+        $this->age = $age;
+        $this->species = $species;
+        $this->entryDate = $entryDate;
+        $this->gender = $gender;
+        $this->idParent = $idParent;
+        $this->diet = $diet;
         addAnimal();
+    }
+
+    function __destruct() {
+        print "Destroying " . __CLASS__ . "\n";
     }
 
 
 
-    public function getName(){return $this->name;}
-    public function setName($name){$this->name = $name;}
+    
 
     public function getAge(){return $this->age;}
     public function setAge($age){$this->age = $age;}

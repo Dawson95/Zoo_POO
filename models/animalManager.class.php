@@ -21,7 +21,7 @@ class AnimalManager extends Model{
 
         foreach($myAnimals as $animal){
             $l = new Animal($animal['id'],$animal['name'],$animal['age'],$animal['species'],$animal['entryDate'],$animal['gender'],$animal['photo'],$animal['diet'],$animal['treatment'],$animal['environnement'],$animal['deathDate'],$animal['information']);
-            $this->addAnimals($l);
+            $this->addAnimal($l);
         }
     }
 
