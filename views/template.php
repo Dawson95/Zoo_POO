@@ -18,11 +18,9 @@
                     <a class="nav-link" href="<?= URL ?>accueil">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= URL ?>livres">Enclos</a>
+                    <a class="nav-link" href="<?= URL ?>animals">Animals</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= URL ?>livres">Gestion des ressources</a>
-                </li>
+                
             </ul>
         </div>
     </nav>

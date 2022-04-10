@@ -1,9 +1,9 @@
 <?php
-require_once "../traits/name.trait.php";
+//require_once "/traits/name.trait.php";
 
 
 abstract class Animal{
-    use getName;
+    //use getName;
     private $id;
     private $name;
     private $age;

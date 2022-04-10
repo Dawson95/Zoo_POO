@@ -16,18 +16,18 @@ ob_start();
     ?>
     <tr>
         <td class="align-middle"><img src="public/images/<?= $animals[$i]->getImage(); ?>" width="60px;"></td>
-        <td class="align-middle"><a href="<?= URL ?>livres/l/<?= $animals[$i]->getId(); ?>"><?= $livres[$i]->getTitre(); ?></a></td>
-        <td class="align-middle"><?= $animals[$i]->getNbPages(); ?></td>
-        <td class="align-middle"><a href="<?= URL ?>livres/m/<?= $animals[$i]->getId(); ?>" class="btn btn-warning">Modifier</a></td>
+        <td class="align-middle"><a href="<?= URL ?><?= $animals[$i]->getId(); ?>"><?= $animals[$i]->getName(); ?></a></td>
+        <td class="align-middle"><?= $animals[$i]->getAge(); ?></td>
+        <td class="align-middle"><a href="<?= URL ?>...<?= $animals[$i]->getId(); ?>" class="btn btn-warning">Modifier</a></td>
         <td class="align-middle">
-            <form method="POST" action="<?= URL ?>livres/s/<?= $animals[$i]->getId(); ?>" onSubmit="return confirm('Voulez-vous vraiment supprimer le livre ?');">
+            <form method="POST" action="<?= URL ?>...<?= $animals[$i]->getId(); ?>" onSubmit="return confirm('Voulez-vous vraiment supprimer l'animal ?');">
                 <button class="btn btn-danger" type="submit">Supprimer</button>
             </form>
         </td>
     </tr>
     <?php endfor; ?>
 </table>
-<a href="<?= URL ?>livres/a" class="btn btn-success d-block">Ajouter</a>
+<a href="<?= URL ?>accueil" class="btn btn-success d-block">Ajouter</a>
 
 <?php
 $content = ob_get_clean();
