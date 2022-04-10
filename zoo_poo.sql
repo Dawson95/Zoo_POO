@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : Dim 10 avr. 2022 à 19:35
+-- Généré le : Dim 10 avr. 2022 à 19:41
 -- Version du serveur :  8.0.21
 -- Version de PHP : 7.3.21
 
@@ -47,7 +47,14 @@ CREATE TABLE IF NOT EXISTS `animals` (
   PRIMARY KEY (`idAnimal`),
   UNIQUE KEY `idAnimal` (`idAnimal`),
   KEY `FK_Animals_Enclosure` (`idEnclosure`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `animals`
+--
+
+INSERT INTO `animals` (`idAnimal`, `name`, `age`, `species`, `entryDate`, `gender`, `iDParent`, `photo`, `diet`, `treatment`, `environnement`, `deathDate`, `informations`, `idFavHealer`, `idEnclosure`) VALUES
+(1, 'Wakanda', '2021-11-02', 'DOG', '2022-04-01', 'Male', NULL, NULL, 'Tacos', 'Codéine', 'terre', '0000-00-00', NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
