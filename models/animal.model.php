@@ -16,6 +16,13 @@ abstract class Animal{
     private $information;
     private $idFavHealer;
     private $idEnclosure;
+    static $nbrAnimals = 0;
+
+    public function __construct(){
+        self::addAnimal();
+    }
+
+
 
     public function getName(){return $this->name;}
     public function setName($name){$this->name = $name;}
@@ -52,4 +59,8 @@ abstract class Animal{
 
     public function getInformation(){return $this->information;}
     public function setInformation($information){$this->information = $information;}
+
+    public function addAnimal(){
+        self::$nbrAnimals += 1;
+    }
 }
